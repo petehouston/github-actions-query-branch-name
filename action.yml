@@ -1,5 +1,8 @@
 name: 'Query Git branch name'
 description: 'Get pure Git branch name without ref/ prefix'
+branding:
+  icon: 'git-branch'
+  color: 'blue'
 inputs:
   name:
     description: 'The environment variable name to export, ex. `CURRENT_BRANCH`, `GIT_BRANCH`'
