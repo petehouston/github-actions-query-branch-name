@@ -1,0 +1,10 @@
+name: 'Query Git branch name'
+description: 'Get pure Git branch name without ref/ prefix'
+inputs:
+  name:
+    description: 'The environment variable name to export, ex. `CURRENT_BRANCH`, `GIT_BRANCH`'
+    required: true
+    default: 'GIT_BRANCH_NAME'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

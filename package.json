@@ -1,0 +1,28 @@
+{
+  "name": "github-actions-query-branch-name",
+  "version": "1.0.0",
+  "description": "Get pure Git branch name without ref/ prefix",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petehouston/github-actions-query-branch-name.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "actions",
+    "github-action"
+  ],
+  "author": "Pete Houston <contact@petehouston.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petehouston/github-actions-query-branch-name/issues"
+  },
+  "homepage": "https://github.com/petehouston/github-actions-query-branch-name#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7"
+  }
+}
