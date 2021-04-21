@@ -1,6 +1,6 @@
 {
   "name": "github-actions-query-branch-name",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Get pure Git branch name without ref/ prefix",
   "main": "dist/index.js",
   "scripts": {
