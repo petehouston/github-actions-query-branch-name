@@ -18,12 +18,12 @@ The current Git branch name.
 
 Export to default environment variable `GIT_BRANCH_NAME`.
 ```yaml
-uses: petehouston/github-actions-query-branch-name@v1.0
+uses: petehouston/github-actions-query-branch-name@v1.1
 ```
 
 Export to custom environment variable, ex. `MY_BRANCH`
 ```yaml
-uses: petehouston/github-actions-query-branch-name@v1.0
+uses: petehouston/github-actions-query-branch-name@v1.1
 with:
   name: MY_BRANCH
 ```
@@ -31,7 +31,7 @@ with:
 Get branch name from output.
 ```yaml
 - name: Query Git branch name
-  uses: petehouston/github-actions-query-branch-name@v1.0
+  uses: petehouston/github-actions-query-branch-name@v1.1
   id: queryBranch
 - name: Get Git branch name
   run: |-
