@@ -1,0 +1,21 @@
+name: "test"
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: "github-actions-query-branch-name"
+      - name: Export as default variable GIT_BRANCH_NAME
+        uses: ./
+      - run: npm install
+      - name: Get Git branch name
+        run: echo $GIT_BRANCH_NAME
+      - name: Export with custom variable MY_BRANCH
+        uses: ./
+        with:
+          name: MY_BRANCH
+      - name: Get custom Git branch name
+        run: echo $MY_BRANCH
