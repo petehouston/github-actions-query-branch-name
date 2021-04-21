@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: "github-actions-query-branch-name"
       - name: Export as default variable GIT_BRANCH_NAME
         uses: ./
         id: getGitBranch1
