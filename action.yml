@@ -8,6 +8,9 @@ inputs:
     description: 'The environment variable name to export, ex. `CURRENT_BRANCH`, `GIT_BRANCH`'
     required: true
     default: 'GIT_BRANCH_NAME'
+outputs:
+  git_branch_name:
+    description: 'The current Git branch name'
 runs:
   using: 'node12'
   main: 'dist/index.js'

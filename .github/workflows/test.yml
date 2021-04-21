@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   test:
+    name: Testing action
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,12 +11,17 @@ jobs:
           path: "github-actions-query-branch-name"
       - name: Export as default variable GIT_BRANCH_NAME
         uses: ./
-      - run: npm install
+        id: getGitBranch1
       - name: Get Git branch name
-        run: echo $GIT_BRANCH_NAME
+        run: |-
+          echo "GIT_BRANCH_NAME = $GIT_BRANCH_NAME"
+          echo "Branch name: ${{ steps.getGitBranch1.outputs.git_branch_name }}"
       - name: Export with custom variable MY_BRANCH
         uses: ./
+        id: getGitBranch2
         with:
           name: MY_BRANCH
       - name: Get custom Git branch name
-        run: echo $MY_BRANCH
+        run: |-
+          echo "MY_BRANCH = $MY_BRANCH"
+          echo "Branch name: ${{ steps.getGitBranch2.outputs.git_branch_name }}"
