@@ -12,5 +12,5 @@ outputs:
   git_branch_name:
     description: 'The current Git branch name'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
