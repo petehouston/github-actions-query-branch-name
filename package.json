@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/petehouston/github-actions-query-branch-name#readme",
   "dependencies": {
-    "@actions/core": "^1.2.7"
+    "@actions/core": "^1.10.0"
   }
 }
